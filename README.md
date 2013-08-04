@@ -14,6 +14,14 @@ This carousel must:
 3. No JS library (ex: YUI, jquery, backbone, etc.).
 4. Must work in either latest Chrome or Firefox (Bonus for extra compatibility).
 
+Exercise Hints
+==============
+
+1. The rules are intentionally vague.
+2. Implementation does not have to be perfect, but should be functional.
+3. Allowed to use sample code from the web, as long as the majority of the solution is written by you.
+4. Your solution will be evaluated more on style and architecture than performance.
+
 Features
 ========
 
