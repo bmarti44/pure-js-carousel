@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>yCarousel</title>
+	</head>
+	<body>
+		<div id="page">
+			<div id="content">
+				<header>
+					<h1>A Super Simple JS Carousel</h1>
+					<p>
+						<a href="http://www.brianmartin.com" title="Brian Martin Home">Home Site</a>
+					</p>
+				</header>
+				<div id="carousel">
+					<ul>
+						<li>
+							<span>1</span>
+						</li>
+						<li>
+							<span>2</span>
+						</li>
+						<li>
+							<span>3</span>
+						</li>
+						<li>
+							<span>4</span>
+						</li>
+						<li>
+							<span>5</span>
+						</li>
+						<li>
+							<span>6</span>
+						</li>
+						<li>
+							<span>7</span>
+						</li>
+					</ul>
+				</div>
+				<footer>
+					<p>
+						&copy; A Brian Martin Joint	
+					</p>
+				</footer>
+			</div>
+		</div>
+		<div id="assets">
+			
+		</div>
+		<script>
+			(function () {
+				'use strict';
+				
+				var divAssets =  document.getElementById('assets'),
+					scripts = {},
+					stylesheets = {},
+					onReady;
+				// setup stylesheets
+				stylesheets.carousel = document.createElement('link');
+				stylesheets.carousel.rel = "stylesheet";
+				stylesheets.carousel.href = "y-carousel.css";
+				stylesheets.carousel.type = "text/css";
+				stylesheets.carousel.media = 'all';
+				
+				// setup scripts
+				scripts.carousel = document.createElement('script');
+				scripts.carousel.type = "text/javascript";
+				scripts.carousel.src = "y-carousel.js";
+				
+				onReady = function () {
+					// lazy load stylesheets and scripts into assets div
+					divAssets.appendChild(stylesheets.carousel);
+					divAssets.appendChild(scripts.carousel);
+				};
+				
+				if (document.readyState === 'complete') {
+					onReady();
+				}
+	
+				if (document.addEventListener) {
+					// set the listener for browsers that support it (AKA not IE)
+					document.addEventListener("DOMContentLoaded", onReady, false);
+				} else if (document.attachEvent) {
+					// otherwise set it for browsers that don't support addEventListener (IE)
+					document.attachEvent('onreadystatechange', onReady);
+					// A fallback to window.onload, that will always work
+	                window.attachEvent('onload', onReady);
+				}
+					
+			}());
+		</script>
+	</body>
+</html>

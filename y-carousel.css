@@ -1,0 +1,45 @@
+body {
+	font: 12px "Arial, Helvetica, sans-serif" #000000;
+}
+
+#carousel {
+	width: 100%;
+	overflow: hidden;
+	position: relative;
+}
+
+#carousel ul {
+	display: block;
+	margin: 0;
+	padding: 0;
+}
+
+#carousel li {
+	line-height: 15;
+	cursor: move;
+	border: solid 5px #000000;
+	margin: 0 5px;
+	text-align: center;
+	font-size: 2em;
+	position: relative;
+	display: block;
+	float: left;
+}
+
+#carousel-left {
+	left: 0;
+}
+
+#carousel-right {
+	right: 0;
+}
+
+#carousel .button {
+	z-index: 10;
+	color: #FFFFFF;
+	background-color: #000000;
+	position: absolute;
+	top: 50%;
+	margin: -10px 0 0 0;
+	cursor: pointer;
+}
